@@ -1,6 +1,8 @@
+package Part1;
+
 import java.util.Scanner;
 
-public class AdditionFormula {
+public class MultiplicationFormula {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Give the first number:");
@@ -8,6 +10,6 @@ public class AdditionFormula {
         System.out.print("Give the second number:");
         int secondNumber = Integer.valueOf(scanner.nextLine());
 
-        System.out.println(firstNumber + " + " + secondNumber + " = " + (firstNumber + secondNumber));
+        System.out.println(firstNumber + " * " + secondNumber + " = " + (firstNumber * secondNumber));
     }
 }

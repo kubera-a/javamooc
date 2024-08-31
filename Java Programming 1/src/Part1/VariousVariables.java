@@ -1,3 +1,5 @@
+package Part1;
+
 public class VariousVariables {
     public static void main(String[] args) {
         int chickens = 3;
