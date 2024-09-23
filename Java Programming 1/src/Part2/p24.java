@@ -15,6 +15,12 @@ return values must always be stored
 This is just the equivalent to writing python functions but with typehints
 Some of it is just establishing scope
 
+Java keeps track of execution through frames
+Each method introduces frames which contains all the variables and instances
+involved in the method. It seems like scope for python.
+Post-execution of the method, its associated frame is removed.
+the method currently being executed is always on the top of the stack
+
 
 
  */
@@ -30,6 +36,8 @@ public class p24 {
         }
 
         sayHelloWhile(n);
+        double avg = average(1, 2, 3, 4);
+        System.out.println("The average of 1, 2, ,3, 4 is " + avg);
 
     }
 
@@ -56,6 +64,18 @@ public class p24 {
         return 10;
         // The below fails during compile time as it can't be reached!
 //        System.out.println("I claim to return an integer, but I don't.");
+    }
+    public static int sum(int number1, int number2, int number3, int number4) {
+        // you can copy your implementation of the method sum here
+        return number1 + number2 + number3 + number4;
+    }
+
+    public static double average(int number1, int number2, int number3, int number4) {
+        // write your code here
+        // calculate the sum of the elements by calling the method sum
+        // practice casting for division
+        int sum = sum(number1, number2, number3, number4);
+        return (double) sum / 4;
     }
 
 }
